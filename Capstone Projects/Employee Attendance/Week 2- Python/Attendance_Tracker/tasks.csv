@@ -1,4 +1,10 @@
 Task_ID,Employee_ID,Task_Name,Assigned_Date,Completed_Date,Status
-1,1,Entire Monthly Report,02-06-2025,02-06-2025,completed
-3,5,Test the demo and report,02-06-2025,NULL,pending
-4,6,Create a secure Database,02-06-2025,NULL,pending
+1,1,Complete monthly report,02-06-2025,02-06-2025,completed
+2,1,Debug API issues,03-06-2025,03-06-2025,completed
+3,1,Write documentation,04-06-2025,04-06-2025,completed
+4,2,Process payroll,02-06-2025,02-06-2025,completed
+5,2,Review applications,03-06-2025,NULL,pending
+6,2,Prepare meeting notes,04-06-2025,NULL,in progress
+7,3,Client presentation,02-06-2025,02-06-2025,completed
+8,3,Email campaign,03-06-2025,NULL,pending
+9,3,Update website,04-06-2025,NULL,pending

@@ -1,13 +1,13 @@
 
 Employee Performance Report
----------------------------
+------------------------------------------------------------------
 
 Top Performers (by productivity score):
              work_hours  productivity_score
 Employee_ID                                
-1                   2.9            0.344828
-5                   NaN                 NaN
-6                   NaN                 NaN
+3              5.375000            0.199074
+1              8.177778            0.122288
+2              9.041667            0.110601
 
 Frequent Absentees:
 Empty DataFrame
@@ -15,5 +15,5 @@ Columns: [days_worked, work_hours]
 Index: []
 
 Overall Statistics:
-- Average work hours per day: 2.90
-- Average productivity score: 0.34
+- Average work hours per day: 7.53
+- Average productivity score: 0.14

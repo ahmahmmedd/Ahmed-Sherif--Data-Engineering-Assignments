@@ -41,7 +41,7 @@ frequent_absentees = summary[summary['days_worked'] < summary['days_worked'].max
 
 report = f"""
 Employee Performance Report
----------------------------
+------------------------------------------------------------------
 
 Top Performers (by productivity score):
 {top_performers[['work_hours', 'productivity_score']]}
