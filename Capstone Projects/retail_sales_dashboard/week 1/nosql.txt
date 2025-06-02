@@ -1,0 +1,43 @@
+test> use RetailCampaigns
+switched to db RetailCampaigns
+
+--- Store promotional campaign feedback in MongoDB
+RetailCampaigns> db.promotional_feedback.insertMany([
+...   {
+...     store_id: 1,
+...     campaign_name: "Summer Saver",
+...     start_date: ISODate("2025-03-01"),
+...     end_date: ISODate("2025-04-01"),
+...     customer_feedback: [
+...       { customer_id: "C001", rating: 4, comment: "Great discounts!" },
+...       { customer_id: "C002", rating: 3, comment: "Could be better." },
+...       { customer_id: "C003", rating: 5, comment: "Great service." },
+...       { customer_id: "C005", rating: 4, comment: "Affordable prices." }
+...     ]
+...   },
+...   {
+...     store_id: 2,
+...     campaign_name: "Buy One Get One",
+...     start_date: ISODate("2025-05-02"),
+...     end_date: ISODate("2025-06-05"),
+...     customer_feedback: [
+...       { customer_id: "C105", rating: 5, comment: "Excellent offer!" },
+...       { customer_id: "C106", rating: 4, comment: "Great offer" },
+...       { customer_id: "C107", rating: 2, comment: "Mediocre quality" }
+...     ]
+...   }
+
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('683d39bc5d0b3dd3e36c4bd0'),
+    '1': ObjectId('683d39bc5d0b3dd3e36c4bd1')
+  }
+}
+
+
+
+RetailCampaigns> db.promotional_feedback.createIndex({ store_id: 1 })
+store_id_1
+RetailCampaigns> db.promotional_feedback.createIndex({ campaign_name: 1 })
+campaign_name_1
