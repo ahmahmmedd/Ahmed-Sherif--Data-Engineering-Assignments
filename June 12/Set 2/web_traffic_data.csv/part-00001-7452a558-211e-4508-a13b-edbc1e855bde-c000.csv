@@ -1,0 +1,5 @@
+UserID,Page,Timestamp,Duration,Device,Country,SessionMinute
+1,Checkout,2024-04-10T10:08:00.000Z,60,Mobile,India,8
+4,Home,2024-04-10T10:10:00.000Z,15,Mobile,Canada,10
+2,Contact,2024-04-10T10:15:00.000Z,25,Desktop,USA,15
+5,Products,2024-04-10T10:20:00.000Z,90,Desktop,India,20
