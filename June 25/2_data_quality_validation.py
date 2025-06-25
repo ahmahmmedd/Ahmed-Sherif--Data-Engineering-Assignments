@@ -34,5 +34,3 @@ with DAG(
         task_id="summarize_data",
         python_callable=summarize_data
     )
-
-    validate >> summarize
