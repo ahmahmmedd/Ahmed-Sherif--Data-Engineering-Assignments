@@ -23,5 +23,3 @@ with DAG(
         trigger_dag_id="child_dag",
         conf={"execution_date": "{{ ds }}"}
     )
-
-    task1 >> trigger_child
