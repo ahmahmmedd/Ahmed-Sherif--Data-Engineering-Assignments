@@ -31,5 +31,3 @@ with DAG(
     )
 
     success = EmptyOperator(task_id="success")
-
-    wait_for_file >> process >> success
