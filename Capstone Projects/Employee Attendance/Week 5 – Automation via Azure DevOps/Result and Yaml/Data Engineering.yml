@@ -1,0 +1,36 @@
+trigger:
+  enabled: false
+schedules:
+- cron: "0 0 * * Mon"
+  displayName: Weekly Monday run
+  branches:
+    include:
+    - main
+  always: true
+stages:
+- stage: __default
+  jobs:
+  - job: Job
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - task: UsePythonVersion@0
+      inputs:
+        versionSpec: '3.8'
+        addToPath: true
+    - task: CmdLine@2
+      displayName: 'Install Python dependencies'
+      inputs:
+        script: pip install pandas numpy pyspark
+    - task: CmdLine@2
+      displayName: 'Process data and generate report'
+      inputs:
+        script: |
+          python process_attendance.py
+          python generate_report.py
+    - task: PublishPipelineArtifact@1
+      inputs:
+        targetPath: 'reports'
+        artifact: 'weekly_attendance_report'
+        publishLocation: 'pipeline'
+
